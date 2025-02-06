@@ -1,0 +1,10 @@
+Ejecucion con input 5136 bytes
+--------------------------------------------
+Creando Histograma con enum switch
+Duracion de la ejecucion: 0.299500 s.
+Creando Histograma con goto
+Duracion de la ejecucion: 0.252700 s.
+Creando Histograma con recursion
+Duracion de la ejecucion: 0.1362600 s.
+Creando Histograma con objetos
+Duracion de la ejecucion: 0.260000 s.

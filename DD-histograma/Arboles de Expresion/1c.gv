@@ -1,0 +1,30 @@
+digraph G {
+    
+    node [width=.8, height =.8]{
+        nodo1[label = "||" ]
+        nodo2[label = "||" ]
+        nodo3[label = "==" ]
+        nodo4[label = "==" ]
+        nodo5[label = "==" ]
+        nodo6[label = "c" ]
+        nodo7[label = "'' \\n ''" ]
+        nodo8[label = "c" ]
+        nodo9[label = "'' ''" ]
+        nodo10[label = "c" ]
+        nodo11[label = "'' \\t ''" ]
+    
+    /* Relationships */
+        nodo1 -> nodo2
+        nodo2 -> nodo4
+        nodo2 -> nodo5
+        nodo4 -> nodo8
+        nodo4 -> nodo9
+        nodo5 -> nodo10
+        nodo5 -> nodo11
+
+        nodo1 -> nodo3
+        nodo3 -> nodo6
+        nodo3 -> nodo7
+    }
+
+}

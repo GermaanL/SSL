@@ -1,0 +1,42 @@
+digraph GetNextTokenMaquinaDeEstado {
+    graph [rankdir=TB, fontname="Arial", fontsize=14, fontcolor=black, bgcolor=lightgray];
+    node [shape=circle, fontsize=12, width=0.3, ];
+    edge [fontsize=10, fontcolor=black];
+    
+    // Nodos
+    Inicio [shape=circle, color=darkblue,];
+    Addition [shape=doublecircle, color=dark ];
+    Multiplication [shape=doublecircle, color=dark];
+    Division [shape=doublecircle, color=dark ];
+    LexError [shape=doublecircle, color=red, fillcolor=lightpink];
+    Entero [shape=doublecircle, color=darkblue, fillcolor=lightyellow];
+    Substraction [shape=doublecircle, color=darkblue, fillcolor=lightyellow];
+    Decimal [shape=doublecircle, color=darkblue, fillcolor=lightyellow];
+    PopResult [shape=doublecircle, color=dark ];
+    Punto [shape=circle, color=dark ];
+   
+    // Transiciones
+    Inicio -> Inicio [label="separador \n.", fontsize=14]
+    Inicio -> Addition [label="+", fontsize=14 ];
+    Inicio -> Substraction [label="-", fontsize=14];
+    Inicio -> Multiplication [label="*", fontsize=14];
+    Inicio -> Division [label="/"];
+    Inicio -> LexError [label=" [^ 0-9/*-+.\\n separador]", fontsize=14];
+    Inicio -> Punto [label=" . ", fontsize=20];
+    Punto -> Decimal [label=" [0-9] ", fontsize=14];
+    Punto -> LexError [label=" [^0-9] ", fontsize=14];
+    Inicio -> Entero [label="[0-9]      ", fontsize=14];
+    Inicio -> PopResult [label="\\n", fontsize=14];
+    Entero -> Entero [label="[0-9]", fontsize=14];
+    Entero -> Decimal [label="  .  ", fontsize=20];
+    Decimal -> LexError [label="[^0-9/*-+\\n separador]  ", fontsize=14];
+    Decimal -> Decimal [label="[0-9]", fontsize=14];
+    Substraction -> Entero[label="[0-9]", fontsize=14]
+
+    // Etiqueta de inicio
+    label="Máquina de Estados GetNextToken";
+    fontsize=16;
+    fontcolor=black;
+}
+
+

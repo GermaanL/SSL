@@ -1,0 +1,6 @@
+/build/
+/libs/
+/dist/
+*.o
+program
+/.vscode/

@@ -1,0 +1,8 @@
+digraph G {
+
+    IN -> IN [label=<   no espaciador<BR></BR><B>++longitud</B>>];
+    IN -> OUT [label=<   espaciador<BR></BR><B>longitudes[longitud]++</B><BR></BR><B>longitud=-1</B>>];
+    OUT -> IN [label=<   no espaciador<BR></BR><B>++longitud</B>>];
+    OUT -> OUT [label=" espaciador "];
+
+}
